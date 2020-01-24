@@ -1,12 +1,12 @@
 package tareacliente;
 
-import tareacliente.views.VentanaJuego;
+import tareacliente.views.VentanaPrincipal;
 
 public class TareaCliente {
 
     public static void main(String[] args) {
-        VentanaJuego juego = new VentanaJuego();
-        juego.init();
+        VentanaPrincipal ventana = new VentanaPrincipal();
+        ventana.init();
     }
     
 }
