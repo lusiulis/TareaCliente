@@ -1,6 +1,8 @@
 
 package tareacliente.views;
 
+import tareacliente.control.GestorCliente;
+
 public class VentanaPrincipal extends javax.swing.JFrame {
 
     public VentanaPrincipal() {
@@ -8,6 +10,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         setVisible(false);
         setLocationRelativeTo(null);
+        txtIp.setText("192.168.1.9");
+        txtPuerto.setText("420");
     }
 
     @SuppressWarnings("unchecked")
@@ -112,9 +116,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPuertoActionPerformed
 
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConectarActionPerformed
-        VentanaJuego juego = new VentanaJuego();
-        setVisible(false);
-        juego.init();
+        new VentanaJuegoCliente(new GestorCliente(txtIp.getText(), Integer.valueOf(txtPuerto.getText().trim()))).init();
+        dispose();
     }//GEN-LAST:event_btnConectarActionPerformed
 
     public void init(){

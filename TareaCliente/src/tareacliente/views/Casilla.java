@@ -1,4 +1,4 @@
-package tareacliente;
+package tareacliente.views;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
