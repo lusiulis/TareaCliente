@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tareacliente.control;
 
 import java.util.Observer;
 import tareacliente.model.ModeloCliente;
 
-/**
- *
- * @author Kevin
- */
 public class GestorCliente {
 
     ModeloCliente modelo;
