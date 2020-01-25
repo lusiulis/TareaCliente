@@ -23,7 +23,12 @@ public class VentanaJuegoCliente extends JFrame implements Observer {
 
     @Override
     public void update(Observable o, Object o1) {
-
+        if(o1 instanceof String){
+            //poner el mensaje en barra de estado abajo
+        }
+        if(o1 instanceof Casilla[][]){
+            //actualizar tablero
+        }
     }
 
     private void configurar() {
@@ -54,7 +59,7 @@ public class VentanaJuegoCliente extends JFrame implements Observer {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (!casilla.isClick()) {
-                    gestor.mandarPorSocket(casilla.getPosx()+","+casilla.getPosy());
+                    gestor.pintar(casilla.getPosx(), casilla.getPosy());
                 }
             }
         });

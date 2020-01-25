@@ -44,7 +44,7 @@ public class ConexionCliente extends Thread {
                 //utiliza un buffered reader para leer lo que llego del socket
                 String mensajeRecibido = new BufferedReader(new InputStreamReader(socket.getInputStream())).readLine();
                 String[] posicion = mensajeRecibido.split(",");
-                gestor.pintar(Integer.valueOf(posicion[0]), Integer.valueOf(posicion[1]));
+                gestor.pintarOponente(Integer.valueOf(posicion[0]), Integer.valueOf(posicion[1]));
 
             } catch (Exception ex) {
             }

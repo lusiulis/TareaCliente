@@ -37,12 +37,12 @@ public class GestorCliente {
         }
     }
 
-    public void mandarPorSocket(String mensaje) {
-        modelo.enviarMensaje(mensaje);
-    }
-
     public void pintar(Integer x, Integer y) {
-        System.out.println("pintar:   " + x + " y:" + y);
+        modelo.pintar(x, y);
     }
 
+    public void pintarOponente(Integer x, Integer y) {
+        modelo.pintarOponente(x, y);
+
+    }
 }
