@@ -1,6 +1,8 @@
 
 package tareacliente.views;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import tareacliente.control.GestorCliente;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
@@ -10,7 +12,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         setVisible(false);
         setLocationRelativeTo(null);
-        txtIp.setText("192.168.1.9");
+        try {
+            txtIp.setText(InetAddress.getLocalHost().getHostAddress());
+        } catch (UnknownHostException ex) {
+        }
         txtPuerto.setText("420");
     }
 
